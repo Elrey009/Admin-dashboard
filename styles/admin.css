@@ -1,0 +1,213 @@
+:root {
+  --bg-footer: #093e1a;
+  --text-color: #ffffff;
+  --special-color: #d1a40e;
+}
+
+/** reset **/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * Base */
+body {
+  min-height: 100vh;
+  font: 1em sans-serif;
+  background-color: rgb(228, 234, 243);
+  color: var(--bg-footer);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* * Utility* */
+
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(12, 1fr));
+  grid-template-rows: repeat(1, 4rem);
+  min-height: 100vh;
+  margin-block: 1rem;
+  margin-inline: auto;
+}
+
+/* ? side bar */
+.side-bar {
+  background-color: whitesmoke;
+  grid-column: 1/2;
+  grid-row: 1/8;
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+}
+
+.admin-links {
+  margin-inline: 1rem;
+  font-size: 1.2rem;
+}
+
+.admin-logo {
+  height: 25%;
+  width: 50%;
+  margin-block: 1rem;
+  margin-right: 4rem;
+}
+
+.hr {
+  color: whitesmoke;
+  width: 85%;
+  margin: 20px;
+}
+
+.list-item {
+  color: var(--bg-footer);
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 3.2rem;
+  padding-left: 1rem;
+  margin-right: 3rem;
+  line-height: 1.5rem;
+  margin-top: 2rem;
+  background-color: whitesmoke;
+}
+
+.list {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.list :hover {
+  background-color: var(--bg-footer);
+  color: var(--special-color);
+}
+
+.admin-profile {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 3rem;
+  top: 7rem;
+}
+
+.admin-profile p {
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.admin-profile a {
+  color: var(--bg-footer);
+  text-decoration: none;
+  font-size: 0.6rem;
+}
+
+.boss-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 3.2rem;
+  margin-bottom: 1em;
+  margin-left: 2rem;
+  border: 1px solid var(--bg-footer);
+}
+
+/* ? nav */
+.nav {
+  background-color: white;
+  grid-column: 2/9;
+  grid-row: 1/2;
+  border-radius: 0.5rem;
+  margin-right: 3rem;
+  display: flex;
+  gap: 35rem;
+  padding-inline: 10rem;
+  padding-block: 1.5rem;
+}
+
+/* #result {
+  margin-top: 1.3rem; */
+/* font-size: 18px;
+} */
+
+/* ? tasks */
+.tasks {
+  background-color: white;
+  grid-column: 2/9;
+  grid-row: 2/3;
+  border-radius: 0.5rem;
+  margin-right: 3rem;
+}
+
+.task-nav {
+  display: flex;
+  gap: 5rem;
+  margin-inline: 2rem;
+  margin-top: 1rem;
+}
+
+.👍 {
+  display: flex;
+  gap: 5rem;
+  margin-left: 22rem;
+}
+.task-nav h4 {
+  padding-bottom: 0.25rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+span {
+  color: var(--special-color);
+  font-size: 0.8rem;
+}
+
+/* ? admin chart */
+
+#admin-chart {
+  background-color: white;
+  grid-column: 2/9;
+  grid-row: 3/8;
+  border-radius: 0.5rem;
+  margin-right: 3rem;
+}
+
+
+/* OVERLAID BACKGROUND */
+
+.section-request{
+background-color: white;
+position: absolute;
+z-index: 100;
+width: 78vw;
+height: 100vh;
+margin-left: 18rem;
+display: none;
+}
+
+.section-requesth4{
+  text-decoration: underline;
+  padding-top: 2rem;
+  margin-left: 2rem;
+}
+
+.Messagessss{
+  background-color: white;
+position: absolute;
+z-index: 1000;
+width: 78vw;
+height: 100vh;
+margin-left: 18rem;
+display: none;
+}
+
+.massagesh2{
+  padding-top: 2rem;
+  margin-left: 2rem;
+  text-align: center;
+}

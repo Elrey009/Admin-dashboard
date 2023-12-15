@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran&family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d4487fbc02.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script2.js"></script>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles/admin.css" />
+  </head>
+  <style>
+    #myChart {
+      height: 70vh;
+      padding-top: 5rem;
+      padding-left: 7rem;
+    }
+  </style>
+
+  <body>
+    <main class="container">
+      <nav class="nav">
+        <div>
+          <p id="updateDate" class="vtt" style="color: black"></p>
+        </div>
+        <!-- <div id="theme">
+          <i class="fa-solid fa-moon" style="color: brown; font-size: 24px"></i>
+        </div> -->
+      </nav>
+
+      <section class="side-bar">
+        <div>
+          <a href="index.html"
+            ><img class="admin-logo" src="image/logo.svg" alt="logo"
+          /></a>
+          <hr class="hr" />
+        </div>
+        <div class="admin-links">
+          <ul class="links">
+            <a class="list Dashboard" href="admin.html">
+              <li class="list-item">
+                <div><i class="fa-solid fa-chart-simple"></i></div>
+                <div>
+                  <p>Dashboard</p>
+                </div>
+              </li>
+            </a>
+            <a class="list request" href="#">
+              <li class="list-item">
+                <div><i class="fa-solid fa-truck"></i></div>
+                <div><p>Requests</p></div>
+              </li>
+            </a>
+            <a class="list" href="employee.html">
+              <li class="list-item">
+                <div><i class="fa-solid fa-users"></i></div>
+                <div class="a"><p>Workers</p></div>
+              </li>
+            </a>
+            <a class="list messages" href="#">
+              <li class="list-item">
+                <div><i class="fa-solid fa-message"></i></div>
+                <div><p>Messages</p></div>
+              </li>
+            </a>
+            <a class="list users" href="#">
+              <li class="list-item">
+                <div><i class="fa-solid fa-users"></i></div>
+                <div><p>Users</p></div>
+              </li>
+            </a>
+          </ul>
+          <div class="admin-profile">
+            <img class="boss-img" src="image/boss.jpg" alt="image" />
+            <p>Mark Right</p>
+            <a href="mailto:markright@gmail.com">markright@gmail.com</a>
+          </div>
+        </div>
+      </section>
+      
+      <section class="tasks">
+        <div class="task-nav">
+          <div>
+            <h4>Pickups</h4>
+            <p>117 total,<span>proceed to resolve them</span></p>
+          </div>
+          <div class="👍">
+            <div>
+              <h4>94</h4>
+              <span>Done</span>
+            </div>
+
+            <div>
+              <h4>23</h4>
+              <span>In progress</span>
+            </div>
+          </div>
+          <!-- <hr class="t-hr"> -->
+          <div></div>
+        </div>
+      </section>
+      <section id="admin-chart">
+        <div style="width: 70vw">
+          <canvas id="myChart"></canvas>
+        </div>
+      </section>
+
+      <section class="section-request">
+        <h4 class="section-requesth4">Lists of Requests</h4>
+      </section>
+
+      <section class="Messagessss">
+        <h2 class="massagesh2">All Messages</h2>
+        <hr />
+      </section>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById("myChart").getContext("2d");
+    const chart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ],
+        datasets: [
+          {
+            label: "Trash point",
+            data: [65, 59, 96, 81, 56, 55, 40, 35, 39, 35, 10, 90],
+            fill: false,
+            borderColor: "rgb(75, 192, 192)",
+            tension: 0.1,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+      },
+    });
+  </script>
+</html>
